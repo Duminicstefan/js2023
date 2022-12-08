@@ -1,0 +1,6 @@
+alert('salut JavaScript')   
+window.alert('Salut')
+confirm('Vreau sa invat JavaScript')
+// console.log('mesaj in consola')
+// console.info('Ínfo status')
+// console.error('Mesaj de eroare')

@@ -1,0 +1,1 @@
+alert('acest mesaj a fost apelat!');
