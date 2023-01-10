@@ -20,25 +20,37 @@
             this.examen = false;
 
             this.salut = function () {
-                console.log('Buna ziua');
+                console.log('Buna ziua numele meu este'+ this.nume);
 
             }
             this.mergeLaExamen = function (nota) {
-                if (examen === true && this.nota1 == 0) {
+                if(this.examen === true && this.nota1 == 0) {
                     this.nota1 = nota;
                 }
-                else if (examen === true && this.nota2 == 0) {
+                else if (this.examen === true && this.nota2 == 0) {
                     this.nota2 = nota;
                 }
-                else {
+                else {  
                     console.log('este abs');
                 }
             }
-        }
-        this.calMedia = function () {
+            this.calMedia = function () {
             return (this.nota1 + this.nota2) / 2
         }
+        }
+        
         const st1 = new Student( 1, 'Popescu Marian'  , 20 );
+        const st2 = new Student( 2, 'Popescu Marian'  , 21 );
+        console.log(st1);
+        console.log(st1);
+        st1.salut();
+        st2.salut();
+        st1.examen = true;
+        st1.mergeLaExamen(10);
+        st1.mergeLaExamen(8);
+        console.log(st1.nota1,st1.nota2);
+        st2.calMedia();
+        console.log('media este:' ,st1.calMedia());
     </script>
 </body>
 
