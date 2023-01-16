@@ -1,23 +1,24 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-	<style>
-	body {
-	  padding: 40px;
-	  background-color: rgba(0, 0, 0, 0.6);
-	}
 
-	.btn {
-	  width: 25px;
-	  height: 25px;
-	  display: inline-block;
-	  cursor: pointer;
-	  margin: 0;
-	  padding: 0;
-	  border: 1px solid white;
-	}
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	<style>
+		body {
+			padding: 40px;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+
+		.btn {
+			width: 25px;
+			height: 25px;
+			display: inline-block;
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+			border: 1px solid white;
+		}
 	</style>
 	<script>
 		var setCookie = function (n, val) {
@@ -38,30 +39,30 @@
 					return c.substring(name.length, c.length);
 				}
 			}
-    		return "";
+			return "";
 		};
 
-document.onclick = function (e) {
-    if (e.target.className == 'btn') {
-        var favColor = e.target.style.backgroundColor;
-        setCookie('color', favColor);
-		alert(favColor);
-        document.body.style.backgroundColor = favColor;
-        console.log(favColor);
-    }
-};
+		document.onclick = function (e) {
+			if (e.target.className == 'btn') {
+				var favColor = e.target.style.backgroundColor;
+				setCookie('color', favColor);
+				alert(favColor);
+				document.body.style.backgroundColor = favColor;
+				console.log(favColor);
+			}
+		};
 
-window.onload = function () {
-    var favColor = document.body.style.backgroundColor;
-    var color = getCookie('color');
-    if (color === '') {
-        document.body.style.backgroundColor = favColor;
-    } else {
-      document.body.style.backgroundColor = color;
-    }
-	alert(color);
-};
-	
+		window.onload = function () {
+			var favColor = document.body.style.backgroundColor;
+			var color = getCookie('color');
+			if (color === '') {
+				document.body.style.backgroundColor = favColor;
+			} else {
+				document.body.style.backgroundColor = color;
+			}
+			alert(color);
+		};
+
 	</script>
 </head>
 
@@ -79,4 +80,5 @@ window.onload = function () {
 		<span class="btn" style="background-color: aqua;"></span>
 	</div>
 </body>
+
 </html>
