@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sursa" >  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum animi laudantium distinctio, quo earum delectus 
+        repudiandae voluptas porro aspernatur accusamus 09827830987 , 075632090198 , 0789038927 cupiditate velit maxime dicta +40756 097 308modi ea veritatis voluptatem doloribus sit
+    telefon 049097921209 0857092783</p>
+
+<p  id="destinatie" ></p>
+<script>
+    let sursa = document.getElementById('sursa').innerHTML;
+    console.log(sursa);
+    let pattern = /[\+]?[0-9\s]{10,13}/g;
+    //let pattern = /[\+]?[0-9-\s]{10,16}/ig;
+    let result = sursa.match(pattern);
+    document.getElementById('destinatie').innerHTML=result;
+    // let result2=sursa.matchALL(pattern);
+    //console.log(Array.from(result2));
+
+
+
+
+</script>
+
+</body>
+
+
+</html>
