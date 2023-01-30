@@ -1,18 +1,30 @@
-document.getElementById('stopButton').onclick = illuminateRed;
-document.getElementById('slowButton').onclick = illuminateYellow;
+function startTrafficSignal () {
+  let green=document.getElementById("green");
+  let red=document.getElementById("red");
+  let yellow=document.getElementById("yellow");
 
-function illuminateRed() {
-  clearLights();
-  document.getElementById('stopLight').style.backgroundColor = "red";
+  green.style.opacity=1;
+  setTimeout(function () {
+      green.style.opacity=.3;
+      red.style.opacity=.3;
+      yellow.style.opacity=1;
+  },5000);
+
+  setTimeout(function () {
+      green.style.opacity=.3;
+      red.style.opacity=1;
+      yellow.style.opacity=.3;
+  },7000);
+
+  setTimeout(function () {
+      green.style.opacity=1;
+      red.style.opacity=.3;
+      yellow.style.opacity=.3;
+  },12000);
 }
 
-function illuminateYellow() {
-  clearLights();
-  document.getElementById('slowLight').style.backgroundColor = "purple";
-}
+let timer=setInterval(function () {
+  startTrafficSignal();
+},12000);
 
-function clearLights() {
-  document.getElementById('stopLight').style.backgroundColor = "black";
-  document.getElementById('slowLight').style.backgroundColor = "black";
-  document.getElementById('goLight').style.backgroundColor = "black";
-}
+startTrafficSignal();

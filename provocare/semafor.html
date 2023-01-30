@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./semafor.css">
-  <script src="./semafor.js"></script>
+    <meta charset="UTF-8">
+    <title>Traffic Signal</title>
+    <link rel="stylesheet" href="./semafor.css">
+    <link rel="stylesheet" href="./semafor2.css">
 </head>
-<body>
-  
-</body>
+<body >
+  <div onload="timer;">
+    <div id="traffic-signal">
+        <div id="green"></div>
+        <div id="yellow"></div>
+        <div id="red"></div>
+    </div>
+    <div id="line1"></div>
+    <div id="line2"></div>
+  </div>
+  <div onload="timer;">
+    <div id="traffic-signal">
+      <div id="greenn"></div>
+      <div id="yelloww"></div>
+      <div id="redd"></div>
+  </div>
+  <div id="line1"></div>
+  <div id="line2"></div>
+</div>
+    <script src="./semafor.js"></script>
+    <script src="./semafor2.js"></script>
+  </body>
 </html>
-<div id="controlPanel">
-    <h1 id="stopButton" class="button">Stop</h1>
-    <h1 id="slowButton" class="button">Slow</h1>
-    <h1 id="goButton" class="button">Go</h1>
-  </div>
-  <div id="traffic-light">
-    <div id="stopLight" class="bulb"></div>
-    <div id="slowLight" class="bulb"></div>
-    <div id="goLight" class="bulb"></div>
-  </div>
-  
